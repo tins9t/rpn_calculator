@@ -1,26 +1,27 @@
 name: rpn_calculator
 description: "A new Flutter project."
+
+publish_to: 'none'
+
+
 version: 1.0.0+1
 
-on:
-  workflow_dispatch:
+environment:
+  sdk: '>=3.2.6 <4.0.0'
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+dependencies:
+  flutter:
+    sdk: flutter
 
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '2.0.6'
+  cupertino_icons: ^1.0.2
 
-      - name: Install dependencies
-        run: flutter pub get
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
 
-      - name: Run tests
-        run: flutter test
+  flutter_lints: ^2.0.0
 
+flutter:
+
+  uses-material-design: true
