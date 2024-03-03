@@ -64,13 +64,13 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(top: 8), // Adjust top padding as needed
+            padding: EdgeInsets.only(top: 8),
             child: ElevatedButton(
               onPressed: () {
                 setState(() {
                   userInput = '';
                   result = 0;
-                  stack.clear(); // Clear the stack
+                  stack.clear();
                 });
               },
               child: Text('Clear'),
